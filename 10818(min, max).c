@@ -2,7 +2,7 @@
 
 int main(void) {
 	int number, max= -1000001, min=1000001;
-	scanf("%d력", &number); //정수의 개수 받기 
+	scanf("%d", &number); //정수의 개수 받기 
 	int suin[number]; //받은 개수만큼의 배열 생성 
 	
 	
@@ -16,7 +16,7 @@ int main(void) {
 		}
 	}
 	
-	printf("%d %d", min, max); //출 
+	printf("%d %d", min, max); //출
 }
 
 
