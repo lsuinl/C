@@ -15,7 +15,7 @@ int main() {
 					z = suin[j+1];
 					suin[j+1] = suin[j];
 					suin[j] = z;
-			}
+				}
             }
 		}
 
