@@ -20,7 +20,6 @@ bool f(sets a, sets b) {
 int main() {
 	int n;
 	scanf("%d", &n);
-	qsort(arr, n, sizeof(Cdnate), compare);
 	sets lists[n];
 	for (int i = 0; i < n; i++)
 		scanf("%d %d", &lists[i].x, &lists[i].y);
