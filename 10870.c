@@ -9,14 +9,7 @@ int main() {
 	}
 	
 	scanf("%d",&inp);
-	
-	if(inp==0)
-		printf("%d",pbo[0]);
-	else if(inp==1)
-		printf("%d",pbo[1]);
-	else
-		printf("%d",pbo[inp]);
+	printf("%d",pbo[inp]);
 	
     return 0;
 }
-//Àç±ÍÇÔ¼ö ¾îÂ¼°í~ ÀúÂ¼°í~ ³ª´Â ¸ô¶ó~~~ 

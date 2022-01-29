@@ -11,7 +11,7 @@ int main() {
     
 		for (i = 0; i < number; i++) {
             for(j=0;j<number-1;j++){
-				if (suin[j+1] < suin[j]) {  //하나씩 순서정렬하기(총 개수만큼 반복) 
+				if (suin[j+1] < suin[j]) {  
 					z = suin[j+1];
 					suin[j+1] = suin[j];
 					suin[j] = z;

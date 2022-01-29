@@ -1,36 +1,30 @@
 #include <stdio.h>
-#include <stdlib.h>
-//https://blog.naver.com/erasedjjang/222435342359
+#include <algorithm>
+//https://blog.naver.com/PostView.nhn?isHttpsRedirect=true&blogId=kyaryunha&logNo=221123641773&parentCategoryNo=&categoryNo=9&viewDate=&isShowPopularPosts=true&from=search
+using namespace std;
 
-typedef struct {
-	int x;
-	int y;
-}Cdnate;
+typedef struct sets {
+	int x, y;
+}sets;
 
-int compare(Cdnate *a, Cdnate *b){
-	if(a->x >b->x) return 1;
-	else if(a->x < b->x) return -1;
-	else{
-		if(a->y > b->y) return 1;
-		else if(a->y < b->y) return -1;
-		else return 0;
+bool f(sets a, sets b) {
+	if (a.x < b.x) {
+		return 1;
 	}
+	if (a.x == b.x && a.y < b.y) {
+		return 1;
+	}
+    return 0;
 }
 
-int main(){
-	int n,i; 
+int main() {
+	int n;
 	scanf("%d", &n);
-	
-	Cdnate *arr = (Cdnate*)malloc(sizeof(Cdnate) *n);
-	
-	for(i=0; i<n; i++){
-		scanf("%d %d", &arr[i].x, &arr[i].y);
-	}
-	
 	qsort(arr, n, sizeof(Cdnate), compare);
-	
-	for(i=0;i<n;i++){
-		printf("%d %d\n", arr[i].x, arr[i].y);
-	}
-	return 0;
+	sets lists[n];
+	for (int i = 0; i < n; i++)
+		scanf("%d %d", &lists[i].x, &lists[i].y);
+	sort(lists, lists + n, f);
+	for (int i = 0; i < n; i++)
+		printf("%d %d\n", lists[i].x, lists[i].y);
 }
